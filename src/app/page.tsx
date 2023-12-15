@@ -1,4 +1,3 @@
-import Image from "next/image";
 import React from "react";
 import { npcArray } from "./database/dummyPosts";
 import Post from "./components/Post";
