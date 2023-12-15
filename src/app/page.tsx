@@ -11,12 +11,7 @@ export default function Home() {
     <main className="flex flex-col items-center justify-between px-24">
       <div className="flex flex-col items-center gap-4">
         <h1 className="text-5xl">Welcome, {user}</h1>
-        <button
-          className="place-self-end bg-neon w-24 text-5xl"
-          id="addCharacter"
-        >
-          +
-        </button>
+        <NewCharacterForm />
         <div className="flex flex-col gap-8">
           {npcArray.map((post, index) => (
             <Post
@@ -32,7 +27,6 @@ export default function Home() {
           ))}
         </div>
       </div>
-      <NewCharacterForm></NewCharacterForm>
     </main>
   );
 }
