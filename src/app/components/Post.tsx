@@ -35,9 +35,11 @@ export default function Post(props: PostProps) {
       </header>
       <p className="py-4">{props.backstory}</p>
       <ul className="flex gap-2">
-        {props.tags.map((tag: string) => {
+        {props.tags.map((tag: string, index) => {
           return (
-            <li className="px-2 border-2 border-white rounded-full">{tag}</li>
+            <li className="px-2 border-2 border-white rounded-full" key={index}>
+              {tag}
+            </li>
           );
         })}
       </ul>
