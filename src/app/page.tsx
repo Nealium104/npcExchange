@@ -2,7 +2,7 @@ import React from "react";
 import { npcArray } from "./database/dummyPosts";
 import Post from "./components/Post";
 import NewCharacterForm from "./components/NewCharacterForm";
-
+import PostCollection from "./components/PostCollection";
 const user = "Neal";
 
 export default function Home() {
@@ -25,6 +25,9 @@ export default function Home() {
             />
           ))}
         </div>
+      </div>
+      <div>
+        <PostCollection />
       </div>
     </main>
   );
