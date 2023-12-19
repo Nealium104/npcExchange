@@ -1,11 +1,17 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 
 const user = "Neal";
 
 export default function NewCharacterForm() {
+  const dialogRef = useRef<HTMLDialogElement>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  useEffect(() => {
+    if (dialogRef.current?.open && !showModal.show) {
+      dialogRef.current?.close();
+    }
+  });
   const toggleForm = () => {
     setIsModalOpen(!isModalOpen);
   };
@@ -13,7 +19,7 @@ export default function NewCharacterForm() {
     <>
       <button
         onClick={toggleForm}
-        className="place-self-end bg-neon w-24 text-5xl"
+        className="place-self-end bg-neon w-24 text-5xl font-bold"
         id="addCharacter"
       >
         +
