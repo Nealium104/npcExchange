@@ -19,7 +19,7 @@ export default function NewCharacterForm() {
     <>
       <button
         onClick={toggleForm}
-        className="place-self-end bg-neon w-24 text-5xl font-bold"
+        className="place-self-end bg-neon border-4 w-24 text-5xl font-bold"
         id="addCharacter"
       >
         +
